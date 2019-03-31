@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--加载资源文件-->
+    <context:property-placeholder location="classpath:properties/application.properties" />
+    <mvc:annotation-driven>
+        <!--之前：解析json Jackson-->
+        <!--使用第三方的json解析器：fastjson-->
+        <mvc:message-converters>
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes" value="application/json"/>
+                <property name="features">
+                    <array>
+                        <value>WriteDateUseDateFormat</value>
+                        <value>WriteMapNullValue</value>
+                    </array>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    <!--配置文件上传-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--限制附件的大小-->
+        <property name="maxUploadSize" value="5242880"></property>
+        <!--指定附件的格式-->
+        <property name="defaultEncoding" value="utf-8"></property>
+    </bean>
+    <!--消费方-->
+    <!--配置服务（应用）名称-->
+    <dubbo:application name="pinyougou-web-manager"></dubbo:application>
+    <!--配置注册中心-->
+    <dubbo:registry address="zookeeper://192.168.200.128:2181"></dubbo:registry>
+    <!--服务发现：调用服务-->
+    <dubbo:annotation package="cn.itcast.core.controller"></dubbo:annotation>
+    <!--配置是否校验服务提供方是否存在-->
+    <!--单位是：毫秒-->
+    <dubbo:consumer check="false" timeout="6000000"/>
+     <!--不拦截静态资源-->
+    <mvc:resources mapping="/js/**" location="/js/"></mvc:resources>
+    <mvc:resources mapping="/css/**" location="/css/"></mvc:resources>
+    <mvc:resources mapping="/img/**" location="/img/"></mvc:resources>
+    <mvc:resources mapping="/plugins/**" location="/plugins/"></mvc:resources>
+</beans>

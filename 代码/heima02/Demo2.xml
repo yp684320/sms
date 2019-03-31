@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans SYSTEM "bean.dtd">
+<beans>
+    <bean id="ul" className="user">
+        <property name="uname" value="root"></property>
+        <property name="psw" value="123"></property>
+    </bean>
+    <bean id="sl" className="student">
+        <property name="sname" value="tom"></property>
+        <property name="score" value="90"></property>
+    </bean>
+</beans>

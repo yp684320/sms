@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.itcast.cn/bean"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.itcast.cn/bean bean-schema.xsd"
+>
+<bean id="sl" className="student">
+    <property value="001"></property>
+    <property value="张三"></property>
+</bean>
+    <import resource="呵呵"></import>
+</beans>
+
+

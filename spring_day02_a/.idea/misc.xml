@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../maven/springmvc_day01_a" />
+    <file type="web" url="file://$PROJECT_DIR$/../maven/springmvc_day01_b" />
+    <file type="web" url="file://$PROJECT_DIR$/../maven/springmvc_day01_bb" />
+    <file type="web" url="file://$PROJECT_DIR$/../maven/springmvc_day01_c" />
+    <file type="web" url="file://$PROJECT_DIR$/../maven/springmvc_day02" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../spring_day02_bb/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring_day02_c/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring_day03_a/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring_day03_b/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring_day03_c/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring_day04_a/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring_day04_xml_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring_day04_jdbcTemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/../maven/springmvc_day01_a/pom.xml" />
+        <option value="$PROJECT_DIR$/../maven/springmvc_day01/pom.xml" />
+        <option value="$PROJECT_DIR$/../maven/springmvc_day01_b/pom.xml" />
+        <option value="$PROJECT_DIR$/../maven/springmvc_day02/pom.xml" />
+        <option value="$PROJECT_DIR$/../springmvc_day02/pom.xml" />
+        <option value="$PROJECT_DIR$/../maven/springmvc_day01_bb/pom.xml" />
+        <option value="$PROJECT_DIR$/../maven/springmvc_day02_aa/pom.xml" />
+        <option value="$PROJECT_DIR$/../maven/springmvc_day01_c/pom.xml" />
+        <option value="$PROJECT_DIR$/a/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+</project>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--约束-->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+  <!--
+      properties标签
+        resource：引入外部的properties文件
+        使用：在当前的配置文件中通过${key值}即可获取到properties文件中的value值
+  -->
+  <properties resource="jdbc.properties"></properties>
+  <!--延时加载的全局配置-->
+  <settings>
+    <setting name="lazyLoadingEnabled" value="true"/>
+  </settings>
+  <!--
+      typeAliases标签
+          作用：可以给类的全限定名起别名
+          type属性：类的全限定名
+          alias属性：起别名
+   -->
+  <typeAliases>
+    <!--要一个一个的给javabean的全限定名起别名-->
+     <!--<typeAlias type="cn.itcast.domain.User" alias="user"></typeAlias>-->
+
+    <!--针对一个包下的所有avabean的全限定名
+       默认别名：就是当前的类名 (不区分大小写)
+       最好用 也是我上课用的规范
+    -->
+    <package name="cn.itcast.domain"></package>
+  </typeAliases>
+
+   <environments default="development">   
+      <environment id="development">   
+        <transactionManager type="JDBC" />
+        <!--连接信息-->
+        <dataSource type="POOLED">   
+          <property name="driver" value="${jdbc.driver}" ></property>
+          <property name="url" value="${jdbc.url}" ></property>
+          <property name="username" value="${jdbc.username}"></property>
+          <property name="password" value="${jdbc.password}"></property>
+        </dataSource>   
+     </environment>   
+  </environments>
+  <!--引入mapper映射文件
+      有三种方式引入
+          1 resource属性引入
+          2 class属性引入  满足2个条件
+                  条件1：映射文件必须放在包里面 这个包名要和对应的dao层的包名一致
+                  条件2：配置文件名还得和接口名一致
+  -->
+
+  <mappers>
+  	<!--<mapper resource="UserMapper.xml"></mapper>-->
+
+    <!--class：也得一个一个的引入-->
+    <!--<mapper class="cn.itcast.dao.UserDao"></mapper>
+    <mapper class="cn.itcast.dao.CategoryDao"></mapper>-->
+
+    <!--package针对一个包下的所有配置文件直接引入
+        name:包名  将包名下的所有配置文件全部引入
+    -->
+    <package name="cn.itcast.dao"></package>
+  </mappers>
+
+
+</configuration>   

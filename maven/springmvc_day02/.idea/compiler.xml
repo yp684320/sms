@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="maven_ssm_dao" />
+        <module name="maven_ssm_oracle" />
+        <module name="maven_ssm_service" />
+        <module name="maven_ssm_web" />
+        <module name="oracle_day02" />
+        <module name="springmvc_day02" />
+        <module name="springmvc_day03" />
+        <module name="springmvc_day03_ssm" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="a" target="1.7" />
+      <module name="maven_ssm_dao" target="1.7" />
+      <module name="maven_ssm_oracle" target="1.7" />
+      <module name="maven_ssm_parent" target="1.7" />
+      <module name="maven_ssm_service" target="1.7" />
+      <module name="maven_ssm_web" target="1.7" />
+      <module name="oracle_day02" target="1.5" />
+      <module name="springmvc_day02" target="1.7" />
+      <module name="springmvc_day03" target="1.7" />
+      <module name="springmvc_day03_ssm" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

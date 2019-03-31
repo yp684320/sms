@@ -1,0 +1,12 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: tensquare-sms
+  rabbitmq:
+    host: 192.168.72.128
+sms:
+  signName: Tree
+  templateCode: SMS_137670376
+  accessKeyId: LTAIm84IKu87WWqg
+  accessKeySecret: zcrdRYvJ2vWfDYdf6Z5MXG7ypyHH1X

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/maven/dubbo_service/dubbo_service.iml" filepath="$PROJECT_DIR$/maven/dubbo_service/dubbo_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/dubbo_web/dubbo_web.iml" filepath="$PROJECT_DIR$/maven/dubbo_web/dubbo_web.iml" />
+      <module fileurl="file://D:/2018就业班/第六阶段  品优购/day13/day13/代码/itcast-sms/itcast-sms.iml" filepath="D:/2018就业班/第六阶段  品优购/day13/day13/代码/itcast-sms/itcast-sms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pingyougou_parent.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pingyougou_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-common/pinyougou-common.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-common/pinyougou-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-dao/pinyougou-dao.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-dao/pinyougou-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-interface/pinyougou-interface.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-interface/pinyougou-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-pojo/pinyougou-pojo.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-pojo/pinyougou-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-buyer/pinyougou-service-buyer.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-buyer/pinyougou-service-buyer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-page/pinyougou-service-page.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-page/pinyougou-service-page.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-search/pinyougou-service-search.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-search/pinyougou-service-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-sellergoods/pinyougou-service-sellergoods.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-sellergoods/pinyougou-service-sellergoods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-user/pinyougou-service-user.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-user/pinyougou-service-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-manager/pinyougou-web-manager.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-manager/pinyougou-web-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-portal/pinyougou-web-portal.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-portal/pinyougou-web-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-shop/pinyougou-web-shop.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-shop/pinyougou-web-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-user/pinyougou-web-user.iml" filepath="$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-user/pinyougou-web-user.iml" />
+    </modules>
+  </component>
+</project>

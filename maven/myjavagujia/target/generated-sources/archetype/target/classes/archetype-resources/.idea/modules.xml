@@ -1,0 +1,12 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/../mygujia/mygujia.iml" filepath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/../mygujia/mygujia.iml" />
+      <module fileurl="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}.iml" filepath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mygujia:war">
+    <output-path>$PROJECT_DIR$/../mygujia/target</output-path>
+    <root id="archive" name="ssm_pages.war">
+      <element id="artifact" artifact-name="mygujia:war exploded" />
+    </root>
+  </artifact>
+</component>

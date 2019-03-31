@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans SYSTEM "bean.dtd">
+<!--
+ 引入 官方提供的 约束文档,来编写我们自己的xml文档.
+ 如何引入 ?
+<!DOCTYPE beans SYSTEM "bean.dtd">
+-->
+
+
+<beans>
+
+
+    <bean id="u1" className="user" type="t1" >
+        <property name="uname" value="root" ></property>
+        <property name="pwd" value="123"></property>
+    </bean>
+    <bean id="s1" className="student">
+        <property name="sname" value="tom">tt</property>
+        <property name="socore" value="100">ss</property>
+    </bean>
+
+    <import resource="">xxx</import>
+</beans>

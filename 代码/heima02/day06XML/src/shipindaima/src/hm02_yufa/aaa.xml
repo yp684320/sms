@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<roots>
+    <root id="" name="" ></root>
+
+    <root>3 &lt; 5 </root>
+    <root>3 &gt; 5 </root>
+    <root>3 &quot; 5 </root>
+    <root>3 &amp; 5 </root>
+    <root>3 &apos; 5 </root>
+<!--
+
+-->
+  <![CDATA[
+        <!--填写任意内容 , 都当做普通文本解析 -->
+
+         <root>3 &lt; 5 </root>
+        <root>3 &gt; 5 </root>
+        <root>3 &quot; 5 </root>
+        <root>3 &amp; 5 </root>
+        <root>3 &apos; 5 </root>
+  ]]>
+</roots>
+

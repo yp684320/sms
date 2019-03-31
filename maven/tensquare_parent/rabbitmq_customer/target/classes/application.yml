@@ -1,0 +1,5 @@
+server:
+  port: 9502
+spring:
+  rabbitmq:
+    host: 192.168.72.128

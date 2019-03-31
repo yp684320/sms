@@ -1,0 +1,8 @@
+server:
+  port: 6868
+eureka:
+  client:
+    register-with-eureka: false #自己就是是服务,自己不需要注册
+    fetch-registry: false #自己就是服务,自己不需要获取自己
+    service-url:
+      defaultZone: http://127.0.0.1:${server.port}/eureka/

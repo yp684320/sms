@@ -1,0 +1,20 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/../gujia" />
+    <file type="web" url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/../mygujia" />
+    <file type="web" url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="${symbol_dollar}PROJECT_DIR${symbol_dollar}/pom.xml" />
+        <option value="${symbol_dollar}PROJECT_DIR${symbol_dollar}/../mygujia/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="crawler_day01" />
+        <module name="crawler_day01_1" />
+        <module name="springboot_day01" />
+        <module name="xuexi" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="crawler_day01" target="1.8" />
+      <module name="crawler_day01_1" target="1.8" />
+      <module name="springboot_day01" target="1.8" />
+      <module name="springdataes" target="1.5" />
+      <module name="springdatajpa_day01" target="1.8" />
+      <module name="springdatajpa_day02" target="1.8" />
+      <module name="springdatajpa_day03" target="1.8" />
+      <module name="springdatajpa_day03_1" target="1.8" />
+      <module name="vue_user" target="1.8" />
+      <module name="VueDemo" target="1.5" />
+      <module name="vueDemo" target="1.7" />
+      <module name="xuexi" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

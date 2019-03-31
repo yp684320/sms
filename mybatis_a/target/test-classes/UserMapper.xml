@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+	namespace：用来区分模块的
+-->
+
+
+<mapper namespace="user">   
+<!-- select 查询 -->   
+	<select id="getAll" resultType="cn.itcast.domain.User">   
+		select *  from user   
+	</select>    
+</mapper>   

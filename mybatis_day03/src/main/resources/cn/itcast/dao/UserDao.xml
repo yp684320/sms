@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--接口的全限定名-->
+<mapper namespace="cn.itcast.dao.UserDao">
+<select id="findUserByAccount" resultMap="user">
+        SELECT u.*, a.id aid, a.uid, a.money FROM USER u LEFT JOIN account a ON u.id = a.uid
+</select>
+        <resultMap id="user" type="user">
+                <id property="id" column="id"></id>
+                <result property="username" column="username"></result>
+                <result property="birthday" column="birthday"></result>
+                <result property="sex" column="sex"></result>
+                <result property="address" column="address"></result>
+                <!--集合属性
+			property:集合的属性名
+			javaType:属性的类型
+			ofType:泛型
+		-->
+                <collection property="accounts" javaType="list" ofType="account">
+                        <id property="id" column="aid"></id>
+                        <result property="uid" column="uid"></result>
+                        <result property="money" column="money"></result>
+                </collection>
+        </resultMap>
+</mapper>

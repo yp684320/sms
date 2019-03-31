@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function changeImg(obj) {
+            //alert(1)
+            obj.src="http://localhost:8080/day10/yan?a="+new Date().getTime();
+        }
+    </script>
+</head>
+<body>
+    <img src="/day10/yan" onclick="changeImg(this)">
+</body>
+</html>

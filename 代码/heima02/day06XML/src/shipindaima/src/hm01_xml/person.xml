@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons>
+    <person>
+
+        <!--
+        保存数据的作用,类似于创建对象 存数据.
+        new Person("001","小明")
+        -->
+
+        <id>001</id>
+        <name>小明</name>
+    </person>
+
+    <person id="002">
+        <name>小丽</name>
+    </person>
+</persons>

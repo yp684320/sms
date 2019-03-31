@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录页面</title>
+
+		<style type="text/css">
+
+			body {
+				background-image: url("./img/bg22.jpg");
+			}
+
+
+			
+			#formid {
+				/*样式*/
+				width: 400px;
+				height: 300px;
+				border: 10px solid gray;
+				background-color: #FFFFFF;
+				/*位置*/
+				margin: 150px 150px 150px 750px;
+				padding-top: 30px;
+				padding-left: 150px;
+			}
+			
+			#formreg {
+				width: 500px;
+				height: 450px;
+				border: 0px solid #333;
+			}
+			
+			tr {
+				height: 70px;
+			}
+			
+			font {
+				color: cornflowerblue;
+				font-size: 30px;
+			}
+			
+			input {
+				font-size: 20px;
+			}
+		</style>
+		
+
+		
+	</head>
+
+	<body>
+
+		<div id="formid">
+
+			<div id="formreg">
+				<form action="/day08/login" method="post">
+
+					<table border="0px" width="500px">
+
+						<tr>
+							<!--
+  								第一行  : 用户注册
+                            -->
+							<td colspan="3">
+								<font>用户登录 USER LOGIN</font>
+							</td>
+						</tr>
+						<!--
+  								第二行  : 用户名 
+                            -->
+						<tr>
+							<td>用户名:</td>
+							<td>
+								<input type="text" name="username" id="username" value="" placeholder="请输入用户名" />
+							</td>
+
+							<td>
+								<font id="namets"  style="display: none; color: red;">登录失败</font>
+							</td>
+
+						</tr>
+						<!--
+  								第三行  : 密码
+                            -->
+						<tr>
+							<td>密码:</td>
+							<td colspan="2">
+								<input type="password" name="password" id="pwd" value="" placeholder="请输入密码" />
+							</td>
+						</tr>
+
+
+						<!--
+  								第六行  : 提交按钮
+                            -->
+						<tr>
+							<td colspan="3" align="center">
+								<input id="b1" type="submit" value="用户登录"   />
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+
+            /*
+             * 校验 用户名 文本框 ,是否有文字.
+             * 如果没有, 显示 "非法提示".
+             * 如果有内容, 不做改变.
+             */
+
+
+
+           function check(){
+                // 2. 获取文本框文字.
+                var username = 	document.getElementById("username").value;
+
+                /*
+                 * 校验
+                 *
+                 *  空字符串  :  ""  , 为false
+                 *  空格         :  "   " , 为true
+                 */
+                if(!username){
+                    alert(username);
+                    // 显示警告文字
+                    document.getElementById("namets").style.display = "block";
+                }
+
+
+
+        }
+	</script>
+
+</html>

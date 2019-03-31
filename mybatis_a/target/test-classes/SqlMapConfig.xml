@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>   
+   <environments default="development">   
+      <environment id="development">   
+        <transactionManager type="JDBC" />
+        <!--连接信息-->
+        <dataSource type="POOLED">   
+          <property name="driver" value="com.mysql.jdbc.Driver" ></property>   
+          <property name="url" value="jdbc:mysql://localhost:3306/kj_day01?characterEncoding=utf8" ></property>
+          <property name="username" value="root"></property>
+          <property name="password" value="root"></property>
+        </dataSource>   
+     </environment>   
+  </environments>
+  <!--引入mapper-->
+  <mappers>
+  	<mapper resource="UserMapper.xml"></mapper>
+  </mappers>
+</configuration>   

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dubbo_service" />
+        <module name="dubbo_web" />
+        <module name="itcast-sms" />
+        <module name="pinyougou-common" />
+        <module name="pinyougou-dao" />
+        <module name="pinyougou-interface" />
+        <module name="pinyougou-pojo" />
+        <module name="pinyougou-service-buyer" />
+        <module name="pinyougou-service-page" />
+        <module name="pinyougou-service-search" />
+        <module name="pinyougou-service-sellergoods" />
+        <module name="pinyougou-service-user" />
+        <module name="pinyougou-web-manager" />
+        <module name="pinyougou-web-portal" />
+        <module name="pinyougou-web-shop" />
+        <module name="pinyougou-web-user" />
+        <module name="pinyougoucommon" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dubbo_service" target="1.7" />
+      <module name="dubbo_web" target="1.7" />
+      <module name="itcast-sms" target="1.6" />
+      <module name="pingyougou_parent" target="1.7" />
+      <module name="pinyougou-common" target="1.7" />
+      <module name="pinyougou-dao" target="1.7" />
+      <module name="pinyougou-interface" target="1.7" />
+      <module name="pinyougou-pojo" target="1.7" />
+      <module name="pinyougou-service-buyer" target="1.7" />
+      <module name="pinyougou-service-page" target="1.7" />
+      <module name="pinyougou-service-search" target="1.7" />
+      <module name="pinyougou-service-sellergoods" target="1.7" />
+      <module name="pinyougou-service-user" target="1.7" />
+      <module name="pinyougou-web-manager" target="1.7" />
+      <module name="pinyougou-web-portal" target="1.7" />
+      <module name="pinyougou-web-shop" target="1.7" />
+      <module name="pinyougou-web-user" target="1.7" />
+      <module name="pinyougoucommon" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

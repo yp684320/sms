@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring_day02_bb" />
+        <module name="spring_day02_c" />
+        <module name="spring_day03_a" />
+        <module name="spring_day03_b" />
+        <module name="spring_day03_c" />
+        <module name="spring_day03_c (1)" />
+        <module name="spring_day04_a" />
+        <module name="spring_day04_jdbcTemplate" />
+        <module name="spring_day04_xml_annotation" />
+        <module name="springmvc_day01_a" />
+        <module name="springmvc_day01_a (1)" />
+        <module name="springmvc_day01_b" />
+        <module name="springmvc_day01_bb" />
+        <module name="springmvc_day01_c" />
+        <module name="springmvc_day02" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="a" target="1.5" />
+      <module name="spring_day02_a" target="1.5" />
+      <module name="spring_day02_aa" target="1.5" />
+      <module name="spring_day02_b" target="1.5" />
+      <module name="spring_day02_bb" target="1.5" />
+      <module name="spring_day02_c" target="1.5" />
+      <module name="spring_day03_a" target="1.5" />
+      <module name="spring_day03_b" target="1.5" />
+      <module name="spring_day03_c" target="1.5" />
+      <module name="spring_day03_c (1)" target="1.5" />
+      <module name="spring_day04_a" target="1.5" />
+      <module name="spring_day04_jdbcTemplate" target="1.5" />
+      <module name="spring_day04_xml_annotation" target="1.5" />
+      <module name="springmvc_day01" target="1.5" />
+      <module name="springmvc_day01_a" target="1.7" />
+      <module name="springMVC_day01_a" target="1.5" />
+      <module name="springmvc_day01_a (1)" target="1.7" />
+      <module name="springmvc_day01_b" target="1.7" />
+      <module name="springmvc_day01_bb" target="1.7" />
+      <module name="springmvc_day01_c" target="1.7" />
+      <module name="springmvc_day02" target="1.7" />
+      <module name="springmvc_day02_aa" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

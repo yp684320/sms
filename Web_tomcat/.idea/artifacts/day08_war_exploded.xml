@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="day08:war exploded">
+    <output-path>D:/tomcat/apache-tomcat-8.5.34/webapps/day08</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="day08/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="day08" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="mysql-connector-java-5.1.39-bin1" />
+          <element id="library" level="application" name="c3p0-0.9.1.2" />
+          <element id="library" level="application" name="commons-dbutils-1.4" />
+          <element id="library" level="module" name="JUnit4" module-name="day08" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

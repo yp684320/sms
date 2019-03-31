@@ -1,0 +1,19 @@
+server:
+  port: 9102 #文档要求的服务端口号
+spring:
+  application:
+    name: tensquare-base #基础微服务的名字,后面的课程eureka会用到
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.72.128:3306/tensquare_base?characterEncoding=utf-8
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true #发现ip

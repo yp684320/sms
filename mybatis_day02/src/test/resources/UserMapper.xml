@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.dao.UserDao">
+    <!--增加数据-->
+<insert id="saveUser" parameterType="cn.itcast.domain.User" >
+    insert into user(username,sex,address)values(#{username},#{sex},#{address})
+</insert>
+    <!--更新用户-->
+    <update id="updateUser" parameterType="cn.itcast.domain.User">
+        update user set username = #{username} where id = #{id}
+    </update>
+    <!--删除数据-->
+    <delete id="deleteUser" parameterType="int">
+        delete from user where id = #{随便写}
+    </delete>
+    <!--查询全部-->
+    <select id="findAll" resultType="cn.itcast.domain.User" >
+        select * from user
+    </select>
+    <!--根据id查询用户-->
+    <select id="findById" parameterType="int" resultType="cn.itcast.domain.User">
+        select * from user where id = #{随便写}
+    </select>
+    <!--模糊查询-->
+    <select id="findLike" parameterType="cn.itcast.domain.User" resultType="cn.itcast.domain.User">
+        select * from user where username like #{username}
+    </select>
+    <!--统计用户数量-->
+    <select id="findCount" resultType="int">
+        select count(*) from user
+    </select>
+    <!--映射配置文件-->
+    <select id="findUser" parameterType="int" resultMap="kj_day01">
+        select id uid,username name,sex denger,address dizhi from user where id = #{随便写}
+    </select>
+    <!--自定义映射
+    自己做映射 给id 为 findUser的这条语句用
+    resultMap标签: 做对象属性和表字段的映射
+          id 属性:  代表唯一(数据库名唯一)
+         type属性:  对象的全限定名
+    使用: 谁使用  谁通过 resultMap标签来调用指定的就是唯一的id值
+    -->
+    <resultMap id="kj_day01" type="cn.itcast.domain.User">
+        <!--id主键的映射
+        property 对象的属性
+        column 表的字段
+        -->
+        <id property="id" column="uid"></id>
+        <!--result其他字段的映射
+        property  对象的属性
+        column  表的字段
+        -->
+        <result property="username" column="name"></result>
+        <result property="sex" column="denger"></result>
+        <result property="address" column="dizhi"></result>
+
+    </resultMap>
+</mapper>

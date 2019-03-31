@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--导入Vue库-->
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<!--首先声明一个div 让Vue管理div 所有的操作都是对div进行的-->
+<!--需要声明一个id 让Vue可以定位到这个div-->
+<div id = "app">message:<br>
+    <!--{{}}显示模型中属性的值-->
+    <span>{{message}}</span><br>
+    <span>{{num}}</span><br>
+    <span>{{num + 20}}</span><br>
+    <span>{{1 > 0 ? "成功":"失败"}}</span>
+
+
+</div>
+</body>
+<script>
+    // 创建Vue对象
+    new Vue({
+        // el:element,使用id选择器获取元素
+        el: "#app",
+        // data:声明模型数据
+        data:{
+            message:"hello vue",
+            num:200
+        }
+
+    })
+</script>
+</html>

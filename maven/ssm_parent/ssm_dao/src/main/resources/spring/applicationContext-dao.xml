@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--SqlSessionFactroyBean-->
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <property name="dataSource" ref="c3p0"></property>
+    <property name="typeAliasesPackage" value="com.itheima.domain"></property>
+    <!--mybatis的其他配置-->
+    <!--分页助手-->
+    <!--配置方法二  在SqlMapConfig中配-->
+    <property name="configLocation" value="classpath:SqlMapConfig.xml"></property>
+    <!--配置方法一   在spring中配置-->
+    <!--<property name="plugins">&lt;!&ndash;配一个插件  里面是一个private Interceptor[] plugins;数组 所有用array&ndash;&gt;
+        &lt;!&ndash;引入多个插件&ndash;&gt;
+        <array>
+            &lt;!&ndash;分页插件&ndash;&gt;
+            <bean class="com.github.pagehelper.PageInterceptor">&lt;!&ndash;有set方法  所以用<property>标签&ndash;&gt;
+                &lt;!&ndash;指定数据库方言参数&ndash;&gt;
+                <property name="properties">&lt;!&ndash;属性是properties 注入用<props>标签&ndash;&gt;
+                    <props>
+                        <prop key="helperDialect">oracle</prop>&lt;!&ndash;key值是方言的属性名&ndash;&gt;
+                    </props>
+                </property>
+            </bean>
+        </array>
+    </property>-->
+</bean>
+    <!--引入properties文件-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+    <!--数据源-->
+    <bean id="c3p0" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"></property>
+        <property name="jdbcUrl" value="${jdbc.url}"></property>
+        <property name="user" value="${jdbc.user}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+    <!--包扫描  创建接口的动态代理对象-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.itheima.dao"></property>
+    </bean>
+
+</beans>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!--对页面放行-->
+    <security:http pattern="/login.jsp" security="none"></security:http>
+    <security:http pattern="/error.jsp" security="none"></security:http>
+    <security:http pattern="/favicon.ico" security="none"></security:http>
+    <!--对静态资源放行-->
+    <security:http pattern="/css/**" security="none"></security:http>
+    <security:http pattern="/img/**" security="none"></security:http>
+    <security:http pattern="/plugins/**" security="none"></security:http>
+    <!--
+        配置拦截的规则
+        auto-config="使用自带的页面"
+        use-expressions="是否使用spel表达式"，如果使用表达式：hasRole('ROLE_USER')
+    -->
+    <security:http auto-config="true" use-expressions="true">
+        <!-- 配置拦截的请求地址，任何请求地址都必须有ROLE_USER的权限 -->
+        <security:intercept-url pattern="/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
+        <!--
+            使用自定义的页面
+             login-page:指定登录页面
+             login-processing-url: 登录请求路径 - 必须使用该路径请求才能安全框架认证
+             authentication-failure-url: 认证失败后的页面
+             default-target-url: 登录成功后指向的页面
+        -->
+        <security:form-login
+                login-page="/login.jsp"
+                login-processing-url="/login"
+                authentication-failure-url="/login.jsp"
+                default-target-url="/index.jsp"></security:form-login>
+
+        <!-- 关闭跨站请求伪造（Cross-site request forgery） -->
+        <security:csrf disabled="true"></security:csrf>
+        <!--退出功能的配置-->
+        <!-- 退出 -->
+        <security:logout invalidate-session="true" logout-url="/logout" logout-success-url="/login.jsp"/>
+        <!--禁止访问后跳转的页面-->
+        <security:access-denied-handler error-page="/403.jsp"></security:access-denied-handler>
+    </security:http>
+
+    <!-- 配置认证(验证登录信息)信息 -->
+    <security:authentication-manager>
+        <!--认证信息的提供者-->
+        <!--
+            关联用户的业务层对象- 必须的实现了UserDetailsService接口
+        -->
+        <security:authentication-provider user-service-ref="userServiceImpl">
+            <!--指定登录时使用的密码加密工具类-->
+            <security:password-encoder ref="passwordEncoder"></security:password-encoder>
+
+            <!--用户服务对象-->
+            <!--<security:user-service>-->
+            <!--提供了临时的用户信息-->
+            <!--
+                {noop}: 不使用密码加密
+                authorities: 认证的角色 -该用户为用户角色
+            -->
+            <!--<security:user name="admin" password="{noop}admin" authorities="ROLE_USER"/>-->
+            <!--</security:user-service>-->
+        </security:authentication-provider>
+    </security:authentication-manager>
+    <!--创建有个加密对象-->
+    <bean  id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
+   <!--配置开启security的注解支持-->
+    <security:global-method-security secured-annotations="enabled"/>
+</beans>

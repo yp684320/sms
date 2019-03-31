@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/maven/dubbo_service" />
+    <file type="web" url="file://$PROJECT_DIR$/maven/dubbo_web" />
+    <file type="web" url="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-buyer" />
+    <file type="web" url="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-page" />
+    <file type="web" url="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-search" />
+    <file type="web" url="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-sellergoods" />
+    <file type="web" url="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-service-user" />
+    <file type="web" url="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-manager" />
+    <file type="web" url="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-portal" />
+    <file type="web" url="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-shop" />
+    <file type="web" url="file://$PROJECT_DIR$/maven/pingyougou_parent/pinyougou-web-user" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/maven/dubbo_service/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/dubbo_web/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/pingyougou_parent/pom.xml" />
+        <option value="D:/2018就业班/第六阶段  品优购/day13/day13/代码/itcast-sms/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

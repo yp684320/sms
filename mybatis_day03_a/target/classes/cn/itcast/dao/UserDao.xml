@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	namespace：用来区分模块的
+-->
+<!--约束-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--接口的全限定名-->
+<mapper namespace="cn.itcast.dao.UserDao">
+    <select id="findUser" resultType="User">
+	  select *from user
+    </select>
+    <!--条件查询 根据username  和 sex 进行查询-->
+    <select id="findUserBy" resultType="user" parameterType="user">
+        select * from user
+
+        <where>
+        <if test="username!=null and username!=''">
+            username = #{username}
+        </if>
+        <if test="sex!=null and sex!=''">
+            and sex = #{sex}
+        </if>
+        </where>
+    </select>
+
+
+    <sql id="userSql" >
+        select * from user
+    </sql>
+    <select id="findUserArr" parameterType="int[]" resultType="user">
+        <include refid="userSql"></include>
+        <where> id in
+        <foreach collection="array" open="(" close=")" item="i" separator=",">
+            #{i}
+        </foreach>
+        </where>
+    </select>
+
+
+    <select id="findUserList" resultType="user" parameterType="list">
+        <include refid="userSql"></include>
+         <where> id in
+             <foreach collection="list" open="(" close=")" separator="," item="i">
+                 #{i}
+             </foreach>
+         </where>
+    </select>
+    <select id="findPOJOUser" parameterType="POJOUser" resultType="user">
+        <include refid="userSql"></include>
+        <where> id in
+            <foreach collection="abcd" open="(" close=")" separator="," item="i">
+                #{i}
+            </foreach>
+        </where>
+    </select>
+</mapper>   

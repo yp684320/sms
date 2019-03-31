@@ -1,0 +1,29 @@
+idea:
+Top #10切来切去：Ctrl+Tab
+
+Top #9选你所想：Ctrl+W
+
+Top #8代码生成：Template/Postfix +Tab
+
+Top #7发号施令：Ctrl+Shift+A
+
+Top #6无处藏身：Shift+Shift
+
+Top #5自动完成：Ctrl+Shift+Enter
+
+Top #4创造万物：Alt+Insert
+
+太难割舍，前三名并列吧！
+
+Top #1智能补全：Ctrl+Shift+Space
+
+Top #1自我修复：Alt+Enter
+
+Top #1重构一切：Ctrl+Shift+Alt+T
+Ctrl+Alt+L:格式化代码
+Ctrl+Alt+F:修改相同变量名
+Ctrl+Z:撤销代码
+Ctrl+C:复制代码
+Ctrl+V:粘贴代码
+Shift+F6:修改类名(需要先单击要修改的类)
+Ctrl+Shift+F10:运行代码

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id = "app">
+    <button v-on:click = "onClick()">点我</button><br>
+    <input type="text" v-on:keyDown = "onKeyDown($event)"/><br>
+    <span>鼠标的x周坐标是:{{x}}</span><br>
+    <span>鼠标的y周坐标是:{{y}}</span><br>
+    <div style="height: 300px;width: 300px;background-color: brown"
+         @mousemove = "onMouseMove($event)" @contextmenu = "onContextMenu($event)">
+    </div>
+    <div style="height: 300px;width: 300px;background-color: forestgreen"
+         @mousemove = "onMouseMove($event)" @contextmenu = "onContextMenu($event)">
+    </div><br>
+
+</div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data:{
+            x: 0,
+            y: 0
+
+        },
+        // methods Vue在methods中定义js方法
+        methods:{
+            onClick: function () {
+                alert("点击事件执行了")
+            },
+            onKeyDown: function (event) {
+                console.log(event.keyCode);
+                if (13 == event.keyCode) {
+                    alert("按的键是回车键")
+                }
+            },
+            onMouseMove: function (event) {
+                this.x = event.x;
+                this.y = event.y
+            },
+            onContextMenu: function (event) {
+                event.preventDefault()
+            }
+        }
+    })
+</script>
+</html>

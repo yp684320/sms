@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <!--accountDao-->
+    <bean id="accountDao" class="cn.itcast.daoImpl.AccountDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate"></property>
+    </bean>
+    <!--accountService-->
+    <bean id="accountService" class="cn.itcast.serviceimpl.AccountServiceImpl">
+        <property name="accountDao" ref="accountDao"></property>
+    </bean>
+    <!--第三方资源-->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="c3p0"></property>
+    </bean>
+    <!--properties文件-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+    <!--c3p0-->
+    <bean id="c3p0" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"></property>
+        <property name="jdbcUrl" value="${jdbc.url}"></property>
+        <property name="user" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+    <!--将事务管理器交给spring管理-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="c3p0"></property>
+    </bean>
+    <!--给方法配置事务-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <!--给那些方法添加事务-->
+        <tx:attributes>
+            <tx:method name="save" isolation="DEFAULT" timeout="-1" read-only="false" propagation="REQUIRED"></tx:method>
+            <tx:method name="update" isolation="DEFAULT" timeout="-1" read-only="false" propagation="REQUIRED"></tx:method>
+            <tx:method name="delete" isolation="DEFAULT" timeout="-1" read-only="false" propagation="REQUIRED"></tx:method>
+            <tx:method name="findAll" isolation="DEFAULT" timeout="-1" read-only="true" propagation="SUPPORTS"></tx:method>
+            <tx:method name="findById" isolation="DEFAULT" timeout="-1" read-only="true" propagation="SUPPORTS"></tx:method>
+            <tx:method name="findById0" isolation="DEFAULT" timeout="-1" read-only="true" propagation="SUPPORTS"></tx:method>
+        </tx:attributes>
+    </tx:advice>
+    <!--aop-->
+    <aop:config>
+        <aop:pointcut id="pt" expression="execution(* cn.itcast..AccountServiceImpl.*(..))"></aop:pointcut>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pt"></aop:advisor>
+    </aop:config>
+
+
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--bean标签: 指定创建对象
+    id属性:  唯一标识
+    class属性: 类的全限定名
+    scope属性:  范围
+         取值:singleton  单例(默认值) 特点:默认使用单例  对象随着容器的创建而创建  容器的销毁而销毁
+         取值:property   多例    特点:如果使用了property 对象就跟容器无关了  调用getBean方法的时候  对象才会创建  调用一次就创建一次
+                                     多例的对象不会随着容器的销毁而销毁  等待垃圾回收机制回收
+
+    -->
+    <!--反射方式创建对象-->
+<bean id="accountService" class="cn.itcast.serviceImpl.AccountServiceImpl">
+    <property name="accountDao" ref="accountDao"></property>
+</bean>
+    <bean id="accountDao" class="cn.itcast.daoImpl.AccountDaoImpl"></bean>
+</beans>

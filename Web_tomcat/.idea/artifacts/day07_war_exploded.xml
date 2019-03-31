@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="day07:war exploded">
+    <output-path>D:/tomcat/apache-tomcat-8.5.34/webapps/Web</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="day07/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="day07" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="commons-dbutils-1.4" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

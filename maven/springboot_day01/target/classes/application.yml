@@ -1,0 +1,17 @@
+#DB Configuration:
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+
+#JPA Configuration:
+  jpa:
+    database: MySQL
+    show-sql: true
+#spring.jpa.generate-ddl=true
+#spring.jpa.hibernate.ddl-auto=update
+person:
+   name: 李四
+   age: 18

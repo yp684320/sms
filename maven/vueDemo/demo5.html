@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" :value="msg"><br>
+    <button @click="changeRed()">红色</button>
+    <button @click="changeGreen()">绿色</button>
+</div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data:{
+            msg:"hello vuejs"
+        },
+        methods:{
+            changeRed: function () {
+                this.msg="红色"
+            },
+            changeGreen: function () {
+                this.msg="绿色"
+            }
+
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="maven_ssm_oracle:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="maven_ssm_oracle.war">
+      <element id="artifact" artifact-name="maven_ssm_oracle:war exploded" />
+    </root>
+  </artifact>
+</component>

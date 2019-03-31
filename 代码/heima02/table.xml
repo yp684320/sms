@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:bean xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:b="http://www.itcast.cn/bbean"
+       xmlns:a = "http://www.itcast.cn/abean">
+    <b:table chang="" kuan="" gao=""></b:table>
+    <b:table chang="" kuan="" gao=""></b:table>
+
+
+</b:bean>

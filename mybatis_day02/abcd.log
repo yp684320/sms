@@ -1,0 +1,28 @@
+2018-11-29 09:08:36,777 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2018-11-29 09:08:36,855 78     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2018-11-29 09:08:36,855 78     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2018-11-29 09:08:36,855 78     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2018-11-29 09:08:36,855 78     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2018-11-29 09:08:36,948 171    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2018-11-29 09:08:37,136 359    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 712025048.
+2018-11-29 09:08:37,136 359    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2a70a3d8]
+2018-11-29 09:08:37,136 359    [           main] DEBUG cn.itcast.dao.UserDao.findUser  - ==>  Preparing: select id uid,username name,sex denger,address dizhi from user where id = ? 
+2018-11-29 09:08:37,167 390    [           main] DEBUG cn.itcast.dao.UserDao.findUser  - ==> Parameters: 43(Integer)
+2018-11-29 09:08:37,183 406    [           main] DEBUG cn.itcast.dao.UserDao.findUser  - <==      Total: 1
+2018-11-29 09:08:37,183 406    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2a70a3d8]
+2018-11-29 09:08:37,183 406    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2a70a3d8]
+2018-11-29 09:08:37,183 406    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 712025048 to pool.
+2018-11-30 20:23:40,961 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2018-11-30 20:23:41,039 78     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2018-11-30 20:23:41,039 78     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2018-11-30 20:23:41,039 78     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2018-11-30 20:23:41,039 78     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2018-11-30 20:23:41,118 157    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2018-11-30 20:23:41,305 344    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 712025048.
+2018-11-30 20:23:41,305 344    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2a70a3d8]
+2018-11-30 20:23:41,305 344    [           main] DEBUG cn.itcast.dao.UserDao.findLike  - ==>  Preparing: select * from user where username like ? 
+2018-11-30 20:23:41,321 360    [           main] DEBUG cn.itcast.dao.UserDao.findLike  - ==> Parameters: %王%(String)
+2018-11-30 20:23:41,352 391    [           main] DEBUG cn.itcast.dao.UserDao.findLike  - <==      Total: 4
+2018-11-30 20:23:41,352 391    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2a70a3d8]
+2018-11-30 20:23:41,352 391    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2a70a3d8]
+2018-11-30 20:23:41,352 391    [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 712025048 to pool.

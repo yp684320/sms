@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时跳转</title>
+    <script>
+        var i = 5;
+        setInterval(function(){
+            //改变值
+            i--;
+            if (i == 0) {
+                location.href="http://www.baidu.com";
+                return;
+            }
+            else{
+                document.getElementById("span01").innerText=i;
+            }
+
+        },1000)
+    </script>
+</head>
+<body>
+
+    <center>
+        <!--<span>  标签不换行 -->
+        <span id="span01">5</span><span>秒之后跳转到<a href="http://www.baidu.com">百度</a></span>
+    </center>
+
+</form>
+</body>
+</html>

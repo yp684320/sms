@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   <schema xmlns="
+           http://www.w3.org/
+           2001/XMLSchema"
+
+
+		   targetNamespace="
+		   http://www.itcast.cn/bean"
+
+	schema 文档中属性 :
+	    xmlns :  表示当前文档引入的约束是谁.
+	    targetNamespace : 表示 当前约束文档的名字, 用来给xml文件中引入当前约束使用.
+
+
+      location :   表示约束文档的位置.
+       两部分构成:
+       属性  = 值
+
+       schemaLocation="文档名称 文档位置"
+
+
+       namespace : 命名空间.  给文档起名字,为什么要叫那么长?
+
+       名字要求, 全球的唯一的名字.
+
+
+ -->
+<beans xmlns= "http://www.itcast.cn/bean"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation ="http://www.itcast.cn/bean bean-schema.xsd">
+
+    <bean id="" className="">
+        <property value=""></property>
+        <property value=""></property>
+        <property value=""></property>
+    </bean>
+
+    <bean id="" className="">
+        <property value=""></property>
+        <property value=""></property>
+        <property value=""></property>
+    </bean>
+
+    <import resource=""></import>
+    <import resource=""></import>
+    <import resource=""></import>
+
+
+</beans>

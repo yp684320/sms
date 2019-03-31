@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--配置数据源-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/springdatajpa"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="root"></property>
+    </bean>
+    <!--配置entityManagerFactory,是用Spring整合的工厂-->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <!--配置数据源-->
+        <property name="dataSource" ref="dataSource"></property>
+        <!--配置映射实体类的包,进行扫描-->
+        <property name="packagesToScan" value="com.itheima.jpa.entity"></property>
+        <!--配置jpa供应商适配器-->
+        <property name="jpaVendorAdapter">
+            <bean  class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <!--配置是否显示sql语句-->
+                <property name="showSql" value="true"></property>
+                <!--配置是否创建数据库表-->
+                <property name="generateDdl" value="true"></property>
+                <!--配置所使用的数据库,ORM框架好处之一是数据库无关性好-->
+                <property name="database" value="MYSQL"></property>
+                <!--设置操作数据库所使用的方言,这个配置有问题-->
+                <property name="databasePlatform" value="org.hibernate.dialect.MySQL55Dialect"/>
+            </bean>
+        </property>
+        <property name="jpaDialect">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect" />
+        </property>
+        <!-- 配置jpa提供者的相关配置
+           hibernate.hbm2ddl.auto:是否自动创建表：
+               create：自动创建
+               update：如果表存在就不创建，如果不存在就自动创建
+               none：不自动创建表
+        -->
+        <property name="jpaProperties">
+            <props>
+                <prop key="hibernate.hbm2ddl.auto">create</prop>
+                <!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->
+            </props>
+        </property>
+
+    </bean>
+
+    <!--配置事务管理器 使用的是jpa事务管理器-->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!--配置方法的事务管理-->
+    <tx:advice id="tx">
+        <tx:attributes>
+            <!--配置那些方法使用事务-->
+            <tx:method name="save*"/>
+            <tx:method name="update*"/>
+            <tx:method name="delete*"/>
+            <!--配置那些方法不是用事务-->
+            <tx:method name="find*" read-only="true" propagation="SUPPORTS"></tx:method>
+            <tx:method name="get*" read-only="true" propagation="SUPPORTS"></tx:method>
+            <tx:method name="query*" read-only="true" propagation="SUPPORTS"></tx:method>
+            <tx:method name="select*" read-only="true" propagation="SUPPORTS"></tx:method>
+        </tx:attributes>
+    </tx:advice>
+
+    <!--事务AOP的配置-->
+    <aop:config>
+        <!--配置切点表达式-->
+        <aop:pointcut id="pointcut" expression="execution(* com.itheima.jpa.service.*.*(..))"></aop:pointcut>
+        <!--配置事务管理的方法指向在哪里-->
+        <aop:advisor advice-ref="tx" pointcut-ref="pointcut"></aop:advisor>
+    </aop:config>
+
+    <!--扫描jpa接口 创建代理对象-->
+    <jpa:repositories base-package="com.itheima.jpa.dao"
+                      transaction-manager-ref="transactionManager"
+                      entity-manager-factory-ref="entityManagerFactory"></jpa:repositories>
+
+    <!--其他组件的包扫描-->
+    <context:component-scan base-package="com.itheima.jpa"></context:component-scan>
+</beans>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id = "app">
+<form v-on:submit="onSubmit($event)" action="http://www.baidu.com" method="get">
+    <input type="text" name="username"/><br>
+    <input type="text" name="password"/><br>
+    <input type="submit" name="提交">
+</form>
+    <input type="text" v-on:keydown.enter = "onKeyDown($event)"/>
+    <!--<input type="text" @keydown.enter="onKeyDown($event)">-->
+</div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        methods:{
+            onSubmit: function (event) {
+                event.preventDefault();
+            },
+            onKeyDown: function (event) {
+                // console.log(event.keyCode);
+                alert("点击了回车")
+            }
+
+        }
+
+    })
+</script>
+</html>

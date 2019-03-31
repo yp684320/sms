@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <!--
+      classsName = "hm01_xml.User"  , 配置一个类的位置, 对应的位置上就存在这样的类文件.
+     -->
+    <bean className="hm01_xml.User">
+
+        <!--
+         property : 属性
+
+         类中有一个属性 , 属性的名字是 username , 属性的值为 jack
+
+         -->
+        <property name="username" value="jack"></property>
+        <property name="password" value="123"></property>
+    </bean>
+</beans>

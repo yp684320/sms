@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+   <student id = "001">张三</student>
+    <student id = "002">李四</student>
+</students>

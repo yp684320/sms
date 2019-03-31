@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <!--
+     properties标签
+       resource：引入外部的properties文件
+       使用：在当前的配置文件中通过${key值}即可获取到properties文件中的value值
+ -->
+  <properties resource="jdbc.properties"></properties>
+  <typeAliases>
+    <!--类全限定名的别名-->
+    <package name="cn.itcast.domain"></package>
+  </typeAliases>
+   <environments default="development">   
+      <environment id="development">   
+        <transactionManager type="JDBC" />
+        <!--连接信息-->
+        <dataSource type="POOLED">   
+          <property name="driver" value="${jdbc.driver}" ></property>
+          <property name="url" value="${jdbc.url}" ></property>
+          <property name="username" value="${jdbc.username}"></property>
+          <property name="password" value="${jdbc.password}"></property>
+        </dataSource>   
+     </environment>   
+  </environments>
+  <!--引入mapper-->
+  <mappers>
+  	<!--<mapper resource="UserMapper.xml"></mapper>-->
+    <package name="cn.itcast.dao"></package>
+  </mappers>
+</configuration>   

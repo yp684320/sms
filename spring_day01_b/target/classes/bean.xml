@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+     <!--bean标签  指定创建对象
+     id属性: 唯一属性
+     class属性:  类的全限定名
+     scope属性:  范围
+          取值:  singleton  单例(默认)  特点 : 默认就是使用单例  对象会随着容器的创建而创建  随着容器的销毁而销毁
+                 proptoType   多例       特点  : 如果使用了多例  对象就与容器无关  不会随着容器的销毁而销毁  调用getBean方法时创建对象
+                                               调用一次方法  对象创建一次  销毁是等待垃圾回收机制回收
+                 应用场景:  线程安全情况下使用 单例  (SQLSessionFactory)
+                           线程不安全使用  多例    (SqlSession)
+     -->
+    <bean id="accountService" class="cn.itcast.serviceImpl.AccountServiceImpl" scope="prototype" >
+        <!--构造器方式进行简单属性赋值
+    给类的属性注入值(构造器)
+    index 使用角标的方式定位参数
+    name: 使用参数的名称来定位的
+    type: 使用参数的全限定名来定位的
+    ,,,,,,,,,,,,,,,以上三种是用来定位属性的
+    value: 用来给简单属性赋值的
+    ref: 用来给spring管理对象赋值的
+    --><!--index-->
+       <!-- <constructor-arg index="0" value="张飞"></constructor-arg>
+        <constructor-arg index="1" value="29"></constructor-arg>-->
+        <!--name-->
+        <!--<constructor-arg name="username" value="李虎"></constructor-arg>
+        <constructor-arg name="age" value="28"></constructor-arg>-->
+        <!--type-->
+        <!--<constructor-arg type="java.lang.String" value ="木头"></constructor-arg>
+        <constructor-arg type="java.lang.Integer" value="45"></constructor-arg>-->
+
+        <!--set方式赋值进行简单方式
+        name; 按照set方法后面的名称定位的(首字母小写)
+        value;给简单属性赋值
+        ref; 给spring管理的对象
+        -->
+        <!--<property name="username" value="陈怡"></property>
+        <property name="age" value="30"></property>-->
+
+        <!--构造器方式进行复杂类型属性赋值
+         array==value
+         list==value
+         set==value
+         ,,,,,,,可以给数组  list集合  set集合   哪一种都可以注入进去
+        -->
+
+      <!-- <constructor-arg name="list">
+          &lt;!&ndash; <list>
+               <value>aaa</value>
+               <value>ccc</value>
+               <value>bbb</value>
+           </list>&ndash;&gt;
+         &lt;!&ndash;  <array>
+           <value>aaa</value>
+           <value>ccc</value>
+           <value>bbb</value>
+       </array>&ndash;&gt;
+           <set>
+               <value>aaa</value>
+               <value>bbb</value>
+               <value>ccc</value>
+           </set>
+       </constructor-arg>
+-->
+        <!--set方式注入-->
+        <property name="list">
+            <array>
+                <value>aaa</value>
+                <value>mmm</value>
+                <value>ccc</value>
+            </array>
+        </property>
+
+    </bean>
+</beans>

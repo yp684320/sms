@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../maven_ssm_parent/maven_ssm_dao/maven_ssm_dao.iml" filepath="$PROJECT_DIR$/../maven_ssm_parent/maven_ssm_dao/maven_ssm_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../maven_ssm_oracle/maven_ssm_oracle.iml" filepath="$PROJECT_DIR$/../maven_ssm_oracle/maven_ssm_oracle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../maven_ssm_parent/maven_ssm_parent.iml" filepath="$PROJECT_DIR$/../maven_ssm_parent/maven_ssm_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../maven_ssm_parent/maven_ssm_service/maven_ssm_service.iml" filepath="$PROJECT_DIR$/../maven_ssm_parent/maven_ssm_service/maven_ssm_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../maven_ssm_parent/maven_ssm_web/maven_ssm_web.iml" filepath="$PROJECT_DIR$/../maven_ssm_parent/maven_ssm_web/maven_ssm_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oracle_day02/oracle_day02.iml" filepath="$PROJECT_DIR$/../oracle_day02/oracle_day02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_day02.iml" filepath="$PROJECT_DIR$/springmvc_day02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springmvc_day03/springmvc_day03.iml" filepath="$PROJECT_DIR$/../springmvc_day03/springmvc_day03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springmvc_day03_ssm/springmvc_day03_ssm.iml" filepath="$PROJECT_DIR$/../springmvc_day03_ssm/springmvc_day03_ssm.iml" />
+    </modules>
+  </component>
+</project>

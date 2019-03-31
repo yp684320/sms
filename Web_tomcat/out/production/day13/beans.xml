@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean name="UserDao" class="dao.impl.UserDaoImpl"></bean>
+    <bean name="UserService" class="service.impl.UserServiceImpl"></bean>
+
+</beans>

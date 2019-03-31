@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean name="UserDao" class="dao.impl.UserDaoImpl"></bean>
+    <bean name="UserService" class="service.impl.UserServiceImpl"></bean>
+
+    <bean name="KWDao" class="dao.impl.KWDaoImpl"></bean>
+    <bean name="KWService" class="service.impl.KWServiceImpl"></bean>
+
+</beans>
+

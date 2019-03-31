@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	namespace：用来区分模块的
+-->
+<!--约束-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--接口的全限定名-->
+<mapper namespace="com.itheima.dao.UserDao">
+    <select id="findAll" resultType="user">
+        select * from user
+    </select>
+    <!--登录-->
+    <select id="login" resultType="user" parameterType="user">
+        select * from user where username = #{username} and password = #{password}
+    </select>
+    <!--全查-->
+    <select id="findAllUser" resultType="user">
+        select * from user
+    </select>
+    <!--增加-->
+    <insert id="save" parameterType="user">
+        insert into user(username ,password ,address) values(#{username},#{password},#{address})
+    </insert>
+    <!--删除-->
+    <delete id="delete" parameterType="int">
+        delete from user where id = #{ii}
+    </delete>
+
+</mapper>
